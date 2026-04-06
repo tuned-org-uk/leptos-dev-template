@@ -152,7 +152,7 @@ cat > "${PROJECT_ROOT}/app/Cargo.toml" <<'EOF'
 [package]
 name = "app"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
@@ -265,7 +265,7 @@ cat > "${PROJECT_ROOT}/server/Cargo.toml" <<'EOF'
 [package]
 name = "server"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [[bin]]
 name = "server"
