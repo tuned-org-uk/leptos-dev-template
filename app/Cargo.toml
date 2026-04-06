@@ -10,8 +10,8 @@ crate-type = ["cdylib", "rlib"]
 default = []
 hydrate = [
   "leptos/hydrate",
-  "leptos_meta/hydrate",
-  "leptos_router/hydrate",
+  # "leptos_meta/hydrate",
+  # "leptos_router/hydrate",
 ]
 ssr = [
   "dep:leptos_axum",
