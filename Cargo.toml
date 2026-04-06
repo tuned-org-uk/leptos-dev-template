@@ -1,0 +1,34 @@
+[workspace]
+members = ["app", "server"]
+resolver = "2"
+
+[workspace.dependencies]
+leptos = "0.8.17"
+leptos_axum = "0.8.8"
+leptos_router = "0.8.13"
+console_error_panic_hook = "0.1"
+leptos_meta = "0.8"
+serde = { version = "1", features = ["derive"] }
+thiserror = "2"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+tower-http = { version = "0.6", features = ["trace"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+wasm-bindgen = "0.2"
+
+[[workspace.metadata.leptos]]
+name = "project-name"
+bin-package = "server"
+lib-package = "app"
+output-name = "project-name"
+site-root = "target/site"
+site-pkg-dir = "pkg"
+style-file = "style/main.scss"
+assets-dir = "public"
+site-addr = "127.0.0.1:3000"
+reload-port = 3001
+browserquery = "defaults"
+env = "DEV"
+server-fn-prefix = "/api"
+server-fn-mod-path = true
+watch-additional-files = ["app/src", "server/src", "style"]
